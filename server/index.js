@@ -21,6 +21,11 @@ mongoose.connect(process.env.MONGO_URL).then((res)=>{
 app.get("/", (req, res) => {
   res.send("Server running");
 });
+
+app.get("/", (req, res) => {
+  res.json("Hello world!!!");
+});
+
 app.use('/api',apiRouter)
 
 const port=process.env.PORT || 4000
